@@ -12,15 +12,11 @@ pirates = [
 # - have more than 15 gold
 
 def gold_filter(list):
-    list_golds = []
-    for i in range(0, len(list)):
-        for key, value in list[i].items():
-            if key == 'gold':
-                if value > 15:
-                    list_golds.append(list[i])
-    for i in range(0, len(list_golds)):
-        for key, value in list_golds[i].items():
-            if key == 'name':
-                print(value)
+   for i in range(0, len(list)):
+       if list[i]['gold'] > 15:
+           print(list[i]['Name'] + " have more than 15 gold")
+
+       if list[i]['has_wooden_leg'] is True:
+           print(list[i]['Name'] + " have wooden leg")
 
 gold_filter(pirates)
